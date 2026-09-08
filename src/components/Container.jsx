@@ -1,5 +1,7 @@
-function Container  (children){
+import '../assets/css/container.css'
+export default function Container({ children }) {
 
-    
+    return (<div className="container">{children}</div>)
+
 
 }

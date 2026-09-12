@@ -1,25 +1,29 @@
 import movies from '../data/movies'
-function MovieCard({ movies }) {
+function MovieCard({ movies, setMovies }) {
     return (
-        <ul>
-            {movies.map((film) => (
-                <li key={film.id}>
-                    <img src={film.image} alt={film.title} />
-                    <p>{film.anno}</p>
-                    <p>{film.title}</p>
-                    <p>{film.genere}</p>
+        <div>
+            <ul>
+                {movies.map((film) => (
+                    <li key={film.id}>
+                        <img src={film.image} alt={film.title} />
+                        <p>{film.anno}</p>
+                        <p>{film.title}</p>
+                        <p>{film.genere}</p>
 
-                    {film.watched ? (
-                        <p>✅ Visto</p>
-                    ) : (
-                        <p>👀 Da vedere</p>
-                    )}
-                </li>
-            ))}
-        </ul>
+                        {film.watched ? (
+                            <p>✅ Visto</p>
+                        ) : (
+                            <p>👀 Da vedere</p>
+                        )}
+                        
+                    </li>
+                ))}
+
+            </ul>
+        </div>
     );
 
-    <button>★ Preferito</button>
+    <button></button>
 
 
     return (

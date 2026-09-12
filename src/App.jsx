@@ -29,7 +29,8 @@ function App() {
   return (
 
     <>
-      <MovieCard movies={movies} />
+      <MovieCard movies={movies} setMovies={setMovies}
+       />
 
     </>
 

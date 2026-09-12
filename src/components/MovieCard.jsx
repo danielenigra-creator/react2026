@@ -1,5 +1,5 @@
 import movies from '../data/movies'
-function MovieCard({ movies, setMovies }) {
+function MovieCard({ movies, onToggleFavorite }) {
     return (
         <div>
             <ul>
@@ -15,7 +15,10 @@ function MovieCard({ movies, setMovies }) {
                         ) : (
                             <p>👀 Da vedere</p>
                         )}
-                        
+                        <button onClick={() => onToggleFavorite(film.id)}>
+                            {film.favorite ? "★ Aggiunto ai preferiti" : "☆ Preferito"}
+                        </button>
+
                     </li>
                 ))}
 
@@ -23,40 +26,8 @@ function MovieCard({ movies, setMovies }) {
         </div>
     );
 
-    <button></button>
 
 
-    return (
 
-        /*  <div className="moviecard">
-              <article>
-  
-                  <img src={props.image} className="card-image" />
-                  <p>{props.anno}</p>
-                  <p>{props.title}</p>
-  
-  
-              </article>
-          </div>
-          */
-        <div>
-            <ul>
-                {movies.map((oggetti) => (
-                    <li key={oggetti.id}>
-                        <img src={oggetti.image} alt={oggetti.title} className="card-image" />
-                        <p>{oggetti.anno}</p>
-                        <p>{oggetti.title}</p>
-                        <p>{oggetti.genere}</p>
-
-                        {oggetti.watched ? (
-                            <p>✅ Visto</p>
-                        ) : (
-                            <p>👀 Da vedere</p>
-                        )}
-                    </li>
-                ))}
-            </ul>
-        </div>
-    )
 }
 export default MovieCard 

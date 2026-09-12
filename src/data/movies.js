@@ -6,7 +6,8 @@ const films = [
         title: 'Liberami Dal Nulla',
         genere: 'biopic',
         watched: true,
-         
+        favorite: false
+
     },
     {
         id: 2,
@@ -15,7 +16,8 @@ const films = [
         title: 'Altrimenti Ci Arrabbiamo',
         genere: 'comico',
         watched: false,
-        
+        favorite: false
+
     },
     {
         id: 3,
@@ -24,7 +26,8 @@ const films = [
         title: 'Nati Con La Camicia',
         genere: 'comico',
         watched: true,
-        
+        favorite: false
+
 
     },
     {
@@ -33,7 +36,8 @@ const films = [
         anno: '1985',
         title: 'Ritorno al Futuro',
         genere: 'fantascienza',
-        watched: false
+        watched: false,
+        favorite: false
     }
 
 ]

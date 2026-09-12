@@ -38,7 +38,7 @@ const films = [
         genere: 'fantascienza',
         watched: false,
         favorite: false
-    }
+    },
 
 ]
 export default films

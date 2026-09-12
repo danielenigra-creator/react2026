@@ -1,11 +1,11 @@
-import movies from '../data/movies'
+import "../assets/css/container.css";
 function MovieCard({ movies, onToggleFavorite }) {
     return (
-        <div>
+        <div className='container'>
             <ul>
                 {movies.map((film) => (
                     <li key={film.id}>
-                        <img src={film.image} alt={film.title} />
+                        <img src={film.image} alt={film.title} className="card-image" />
                         <p>{film.anno}</p>
                         <p>{film.title}</p>
                         <p>{film.genere}</p>
@@ -25,9 +25,5 @@ function MovieCard({ movies, onToggleFavorite }) {
             </ul>
         </div>
     );
-
-
-
-
 }
 export default MovieCard 

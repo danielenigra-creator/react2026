@@ -2,6 +2,7 @@ import { useState } from "react";
 import moviesData from "./data/movies";
 import MovieCard from "./components/MovieCard";
 import Favorite from "./components/Favorite";
+import SearchBar from "./components/SearchBar";
 function App() {
 
   const [movies, setMovies] = useState(moviesData);
@@ -18,6 +19,8 @@ function App() {
   return (
 
     <>
+      <SearchBar></SearchBar>
+
       <MovieCard movies={movies} onToggleFavorite={toggleFavorite}
       />
       <Favorite movies={movies}

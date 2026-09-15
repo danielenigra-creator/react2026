@@ -19,7 +19,7 @@ function App() {
   return (
 
     <>
-      <SearchBar></SearchBar>
+     
 
       <MovieCard movies={movies} onToggleFavorite={toggleFavorite}
       />

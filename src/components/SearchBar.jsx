@@ -1,18 +1,18 @@
-import { useState } from "react";
-function SearchBar({ movies }) {
-    const [searchItem, setsearchItem] = useState("");
-    searchItem = movies;
-    function handleChange(e) {
-        setsearchItem(e.target.value);
-    }
-    return (
+function SearchBar({ searchTerm, setSearchTerm }) {
+  function handleChange(e) {
+    setSearchTerm(e.target.value);
+  }
 
-        <div>
-            <input type="text" placeholder="Cerca il tuo film" value={searchItem} onChange={handleChange} />
-            <p>{searchItem}</p>
-        </div>
-    )
-
-
+  return (
+    <div>
+      <input
+        type="text"
+        placeholder="Cerca il tuo film"
+        value={searchTerm}
+        onChange={handleChange}
+      />
+    </div>
+  );
 }
+
 export default SearchBar;
